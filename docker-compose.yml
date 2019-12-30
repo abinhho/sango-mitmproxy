@@ -1,0 +1,13 @@
+version: '3.5'
+services:
+  mitmproxy:
+    container_name: sango-mitmproxy
+    build: .
+    volumes:
+    - .:/sango-mitmproxy
+    ports:
+      - "8088:8088"
+    expose:
+        - "8088"
+    stdin_open: true
+    tty: true
